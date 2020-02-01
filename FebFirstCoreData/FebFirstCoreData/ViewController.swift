@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         //1
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
+            return
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -90,6 +90,39 @@ class ViewController: UIViewController {
         }
     }
     
+    func deleteData(name: String){
+        
+        //As we know that container is set up in the AppDelegates so we need to refer that container.
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        //We need to create a context from this container
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "People")
+        fetchRequest.predicate = NSPredicate(format: "name = %@", name)
+        
+        do
+        {
+            let test = try managedContext.fetch(fetchRequest)
+            
+            let objectToDelete = test[0] as! NSManagedObject
+            managedContext.delete(objectToDelete)
+            
+            do{
+                try managedContext.save()
+            }
+            catch
+            {
+                print(error)
+            }
+            
+        }
+        catch
+        {
+            print(error)
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -101,45 +134,29 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//
-//        cell.textLabel?.text = people[indexPath.row]
-//
-//        return cell
-
+        //
+        //        cell.textLabel?.text = people[indexPath.row]
+        //
+        //        return cell
+        
         let person = people[indexPath.row]
-
+        
         cell.textLabel?.text = person.value(forKeyPath: "name") as? String
         return cell
     }
     
     
-    //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        //        return names.count
-    //        return people.count
-    //    }
-    //
-    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        // let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    //        //        cell.textLabel?.text = names[indexPath.row]
-    //        //        return cell
-    //
-    //        let person = people[indexPath.row]
-    //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    //        cell.textLabel?.text = person.value(forKeyPath: "name") as? String
-    //        return cell
-    //    }
-    //
-    //    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    //        return true
-    //    }
-    //
-    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    //        if (editingStyle == .delete) {
-    //            let person = people[indexPath.row]
-    //            people.remove(at: indexPath.row)
-    //            deleteData(name: (person.value(forKeyPath: "name") as? String)!)
-    //            tableView.deleteRows(at: [indexPath], with: .fade)
-    //        }
-    //    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            let person = people[indexPath.row]
+            people.remove(at: indexPath.row)
+            deleteData(name: (person.value(forKeyPath: "name") as? String)!)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
