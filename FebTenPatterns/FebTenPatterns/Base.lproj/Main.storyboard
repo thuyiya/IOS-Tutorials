@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SI5-mx-O5c">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My View Controller-->
+        <scene sceneID="70V-a6-BuQ">
+            <objects>
+                <viewController id="SI5-mx-O5c" customClass="MyViewController" customModule="FebTenPatterns" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rOC-dR-gn7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="fQP-A4-vRY">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDw-oF-N5e">
+                                        <rect key="frame" x="140.33333333333331" y="0.0" width="133.33333333333331" height="272.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-S9-Cbv">
+                                        <rect key="frame" x="121.66666666666667" y="311.66666666666663" width="170.66666666666663" height="272.66666666666663"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZP-se-Pxd">
+                                        <rect key="frame" x="112.66666666666669" y="623.33333333333337" width="189" height="272.66666666666663"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <state key="normal" title="Choose A Team">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectTeam:" destination="SI5-mx-O5c" eventType="touchUpInside" id="b1w-a5-jmG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fQP-A4-vRY" firstAttribute="width" secondItem="rOC-dR-gn7" secondAttribute="width" id="97Z-fa-2Gq"/>
+                            <constraint firstItem="fQP-A4-vRY" firstAttribute="centerY" secondItem="zkk-IW-d1o" secondAttribute="centerY" id="F99-uE-u46"/>
+                            <constraint firstItem="fQP-A4-vRY" firstAttribute="height" secondItem="rOC-dR-gn7" secondAttribute="height" id="Wzj-bh-vTG"/>
+                            <constraint firstItem="fQP-A4-vRY" firstAttribute="centerX" secondItem="zkk-IW-d1o" secondAttribute="centerX" id="w60-Rl-hoK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zkk-IW-d1o"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgTeam" destination="gUw-S9-Cbv" id="i6n-hY-d1N"/>
+                        <outlet property="lblTitle" destination="lDw-oF-N5e" id="p4D-FV-VqO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8Q-eR-XXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="-1103"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FebTenPatterns" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BR8-st-d3O">
+                                <rect key="frame" x="158" y="313" width="98" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="g5k-UM-iCN"/>
+                                    <constraint firstAttribute="width" constant="98" id="upx-UV-VZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="FDx-cA-btu">
+                                <rect key="frame" x="107" y="353" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="2Ec-6Z-TxH"/>
+                                    <constraint firstAttribute="width" constant="200" id="THq-5x-cky"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibS-RK-UPC">
+                                <rect key="frame" x="107" y="593" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="tzq-8t-6dl"/>
+                                    <constraint firstAttribute="height" constant="40" id="u90-wW-zeh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Choose A Team"/>
+                                <connections>
+                                    <action selector="navigateToChooseScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sDZ-1b-LFS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BR8-st-d3O" firstAttribute="top" secondItem="FDx-cA-btu" secondAttribute="top" constant="-40" id="8zA-eX-8fr"/>
+                            <constraint firstItem="FDx-cA-btu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DPO-Jh-mZk"/>
+                            <constraint firstItem="BR8-st-d3O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F7e-Le-CGJ"/>
+                            <constraint firstItem="ibS-RK-UPC" firstAttribute="centerX" secondItem="FDx-cA-btu" secondAttribute="centerX" id="fvf-jh-IYH"/>
+                            <constraint firstItem="ibS-RK-UPC" firstAttribute="top" secondItem="FDx-cA-btu" secondAttribute="bottom" constant="40" id="m7f-2l-BG7"/>
+                            <constraint firstItem="FDx-cA-btu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="njC-Ga-cPk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnTeamSelect" destination="ibS-RK-UPC" id="kWq-Nm-fZy"/>
+                        <outlet property="imgTeam" destination="FDx-cA-btu" id="Kaa-Lm-Yry"/>
+                        <outlet property="lblTitle" destination="BR8-st-d3O" id="Nhu-tM-kJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Choose View Controller-->
+        <scene sceneID="jjc-7Q-pwv">
+            <objects>
+                <viewController storyboardIdentifier="ChooseScreen" id="deW-GJ-uVp" customClass="ChooseViewController" customModule="FebTenPatterns" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HUh-If-bAr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jzb-84-fof">
+                                <rect key="frame" x="0.0" y="44" width="414" height="778"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKD-OZ-Udt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="232.66666666666666"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-VX-cUG">
+                                        <rect key="frame" x="0.0" y="272.66666666666669" width="414" height="232.66666666666669"/>
+                                        <color key="backgroundColor" red="1" green="0.40784313729999999" blue="0.050980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                        <state key="normal" title="Team Orange">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressOrange:" destination="deW-GJ-uVp" eventType="touchUpInside" id="CrE-c6-gBO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsF-0c-3L5">
+                                        <rect key="frame" x="0.0" y="545.33333333333337" width="414" height="232.66666666666663"/>
+                                        <color key="backgroundColor" red="0.2102418664" green="0.5155714897" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                        <state key="normal" title="Team Blue">
+                                            <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressBlue:" destination="deW-GJ-uVp" eventType="touchUpInside" id="kij-Y5-l2O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dpW-vz-HQl" firstAttribute="bottom" secondItem="jzb-84-fof" secondAttribute="bottom" constant="40" id="RY0-MT-2Wi"/>
+                            <constraint firstItem="dpW-vz-HQl" firstAttribute="top" secondItem="jzb-84-fof" secondAttribute="top" id="cVd-4w-17Y"/>
+                            <constraint firstItem="dpW-vz-HQl" firstAttribute="trailing" secondItem="jzb-84-fof" secondAttribute="trailing" id="fwR-AC-iIW"/>
+                            <constraint firstItem="jzb-84-fof" firstAttribute="leading" secondItem="dpW-vz-HQl" secondAttribute="leading" id="y8w-bN-zOU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dpW-vz-HQl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLD-AQ-FQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1499" y="44"/>
+        </scene>
+        <!--Team View Controller-->
+        <scene sceneID="Ebs-TV-haE">
+            <objects>
+                <viewController storyboardIdentifier="TeamScreen" id="GOH-te-U8B" customClass="TeamViewController" customModule="FebTenPatterns" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ol7-So-9e6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-2h-NAu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="778"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lit-mh-vQZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="232.66666666666666"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYT-cA-iVD">
+                                        <rect key="frame" x="0.0" y="272.66666666666669" width="414" height="232.66666666666669"/>
+                                        <color key="backgroundColor" red="0.2102418664" green="0.5155714897" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="Team Police">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionPolice:" destination="GOH-te-U8B" eventType="touchUpInside" id="m3g-Kr-G4n"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fir-zg-v7v">
+                                        <rect key="frame" x="0.0" y="545.33333333333337" width="414" height="232.66666666666663"/>
+                                        <color key="backgroundColor" red="1" green="0.40784313729999999" blue="0.050980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <state key="normal" title="Team Devil">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionDevil:" destination="GOH-te-U8B" eventType="touchUpInside" id="ub6-Fe-aNa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NTw-b9-9hq" firstAttribute="trailing" secondItem="eDX-2h-NAu" secondAttribute="trailing" id="IYP-Ov-Yfs"/>
+                            <constraint firstItem="NTw-b9-9hq" firstAttribute="bottom" secondItem="eDX-2h-NAu" secondAttribute="bottom" constant="40" id="glS-S0-iqo"/>
+                            <constraint firstItem="eDX-2h-NAu" firstAttribute="top" secondItem="NTw-b9-9hq" secondAttribute="top" id="vvE-Gl-QJS"/>
+                            <constraint firstItem="eDX-2h-NAu" firstAttribute="leading" secondItem="NTw-b9-9hq" secondAttribute="leading" id="zfe-WU-la3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NTw-b9-9hq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vs-PU-mbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="-1104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Team" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
